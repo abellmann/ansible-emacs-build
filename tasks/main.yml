@@ -10,6 +10,15 @@
       paths:
         - '{{role_path}}/vars'
 
+- name: build dependencies of default emacs installation
+  become: yes
+  become_user: root
+  with_items: '{{emacs_build_os_build_deps}}'
+  apt:
+    name: '{{item}}'
+    state: build-dep  
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+    
 - name: os pkgs....
   become: yes
   become_user: root
@@ -39,7 +48,7 @@
 - name: configuring...
   become: yes
   become_user: root
-  command: ./configure --with-x=no
+  command: ./configure
   args:
     chdir: '{{emacs_build_src_dir}}'
     creates: '{{emacs_build_src_dir}}/Makefile'
@@ -58,11 +67,11 @@
   command: make install
   args:
     chdir: '{{emacs_build_src_dir}}'
-    creates: /usr/local/bin/emacs
+    creates: '/usr/local/bin/emacs-{{emacs_build_ver}}'
 
-- name: cleanup...
-  become: yes
-  become_user: root
-  file:
-    path: '{{emacs_build_src_dir}}'
-    state: absent
+#- name: cleanup...
+#  become: yes
+#  become_user: root
+#  file:
+#    path: '{{emacs_build_src_dir}}'
+#    state: absent
