@@ -1,4 +1,5 @@
 ---
 emacs_build_os_pkgs:
   - ncurses-dev
+  - xinit
 emacs_build_os_build_deps:
