@@ -2,3 +2,18 @@
 emacs_build_os_pkgs:
   - ncurses-devel
   - "@X Window System"
+  - gtk+-devel 
+  - gtk2-devel
+  - libXpm-devel
+  - libpng-devel
+  - giflib-devel
+  - libtiff-devel 
+  - libjpeg-devel   
+  - ncurses-devel
+  - gpm-devel
+  - dbus-devel 
+  - dbus-glib-devel 
+  - dbus-python
+  - GConf2-devel 
+  - pkgconfig 
+  - libXft-devel
