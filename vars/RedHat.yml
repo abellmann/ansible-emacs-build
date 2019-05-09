@@ -2,8 +2,9 @@
 emacs_build_os_pkgs:  
   - ncurses-devel
   - libX11-devel 
-  - gtk3-devel 
+  - gtk2-devel 
   - libXpm-devel 
   - libjpeg-turbo-devel 
   - giflib-devel 
-  - libtiff-devel  
+  - libtiff-devel
+  - gnutls  
