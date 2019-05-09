@@ -26,6 +26,7 @@ env:
 #  - OS=archlinux_latest
   - OS=debian_jessie
   - OS=debian_stretch
+  - OS=debian_buster
   - OS=ubuntu_trusty
   - OS=ubuntu_xenial
     
@@ -36,8 +37,8 @@ before_install:
 script:
   - >-
     dcb
-    --upstreamgroup andrewrothstein
     --upstreamapp docker-ansible-role
+    --upstreamgroup andrewrothstein
     --pull ${OS}
     --write ${OS}
     --build ${OS}
