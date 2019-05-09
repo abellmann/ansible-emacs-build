@@ -18,7 +18,17 @@
     name: '{{item}}'
     state: build-dep  
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-    
+
+- name: x windows packages
+  become: yes
+  become_user: root
+  with_items:
+    - xinit
+    - xcompmgr
+  package:
+    name: '{{item}}'
+    state: present
+  
 - name: os pkgs....
   become: yes
   become_user: root
