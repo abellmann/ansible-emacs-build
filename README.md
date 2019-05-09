@@ -1,8 +1,8 @@
-andrewrothstein.emacs-build
+abellmann.emacs-build
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-emacs-build.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-emacs-build)
+[![Build Status](https://travis-ci.org/abellmann/ansible-emacs-build.svg?branch=master)](https://travis-ci.org/abellmann/ansible-emacs-build)
 
-A role to build [Emacs](https://www.gnu.org/software/emacs/)
+A role to build [Emacs](https://www.gnu.org/software/emacs/) for X Windows
 
 Requirements
 ------------
@@ -36,4 +36,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein <andrew.rothstein@gmail.com>
+Andreas Bellmann (https://github.com/abellmann)
