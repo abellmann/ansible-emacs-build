@@ -26,7 +26,6 @@ env:
 #  - OS=archlinux_latest
   - OS=debian_jessie
   - OS=debian_stretch
-  - OS=debian_buster
   - OS=ubuntu_trusty
   - OS=ubuntu_xenial
     
