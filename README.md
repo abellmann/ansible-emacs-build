@@ -25,7 +25,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.emacs-builder
+    - abellmann.ansible_emacs_build
 ```
 
 License
