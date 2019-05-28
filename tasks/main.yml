@@ -16,9 +16,9 @@
   with_items: '{{ emacs_build_os_build_deps }}'
   apt:
     name: '{{ item }}'
-    state: build-dep  
+    state: build-dep
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-    
+
 - name: os pkgs....
   become: yes
   become_user: root
@@ -26,7 +26,7 @@
   package:
     name: '{{ item }}'
     state: present
-  
+
 - name: downloading...
   become: yes
   become_user: root

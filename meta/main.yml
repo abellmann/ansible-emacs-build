@@ -27,4 +27,3 @@ dependencies:
     version: v1.0.10
   - role: andrewrothstein.gcc-toolbox
     version: v1.0.7
-  
